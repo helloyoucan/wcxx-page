@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../vendor/bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/newPublicityPlan.css" />
+		<link rel="stylesheet" href="../../vendor/jquery.my-message/css/jquery.my-message.1.1.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid setWidth new-publicity-plan">
+			<div class="form-table">
+				<div class="ft-top">
+					<h3 class="text-center">宣传计划申请</h3>
+					<p class="ft-t-state">
+						状态&nbsp;:&nbsp;待审批
+					</p>
+				</div>
+				<table class="table table-bordered">
+					<tbody>
+						<tr>
+							<td>拟稿部门</td>
+							<td></td>
+							<td>拟稿时间</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>拟稿人</td>
+							<td></td>
+							<td>联系电话</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><span class="font-red">*</span>标题</td>
+							<td colspan="3">
+								<input type="text" class="form-control input-sm" />
+							</td>
+						</tr>
+						<tr>
+							<td><span class="font-red">*</span>类别</td>
+							<td>
+								<select class="form-control input-sm">
+									<option value="">月度</option>
+									<option value="">年度</option>
+								</select>
+							</td>
+							<td><span class="font-red">*</span>负责人</td>
+							<td>
+								<input type="text" class="form-control input-sm" />
+							</td>
+						</tr>
+						<tr>
+							<td><span class="font-red">*</span>计划所属年月</td>
+							<td>
+								<input type="text" class="form-control input-sm" />
+							</td>
+							<td></td>
+							<td></td>
+						</tr>
+
+					</tbody>
+				</table>
+				<div class="data-table mid-table">
+					<div class="mt-title">
+						<h4>请在以下表格中填写需要领用的宣传物资</h4>
+					</div>
+					<div class="mt-handle-button-group">
+						<button id="mt-btn-select" class="btn btn-default" data-target=".bs-example-modal-lg">选择</button>
+						<button id="mt-btn-add" class="btn btn-default">添加</button>
+						<button id="mt-btn-del" class="btn btn-default">删除</button>
+						<p class="mt-hbg-tip">说明：点击“选择”按钮选择以往宣传计划，便可一键填入以下计划任务工作指标。</p>
+					</div>
+					<table class="table table-bordered  checked-table">
+						<thead>
+							<tr>
+								<th>
+									<input type="checkbox" />
+								</th>
+								<th>工作指标</th>
+								<th>负责人</th>
+								<th>计划完成次数</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td><input type="text" class="form-control input-sm" /></td>
+								<td><input type="text" class="form-control input-sm" /></td>
+								<td><input type="text" class="form-control input-sm" /></td>
+							</tr>
+							<script id="mt-tr" type="text/html">
+								<tr>
+									<td><input type="checkbox" /></td>
+									<td><input type="text" class="form-control input-sm" /></td>
+									<td><input type="text" class="form-control input-sm" /></td>
+									<td><input type="text" class="form-control input-sm" /></td>
+								</tr>
+							</script>
+						</tbody>
+					</table>
+				</div>
+				<table class="table table-bordered">
+					<tbody>
+						<tr>
+							<td>备注</td>
+							<td colspan="3">
+								<textarea class="form-control" rows="3"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>可查阅部门</td>
+							<td colspan="3">
+								<div class="mt-checkbox-list">
+									<label class="checkbox-inline">
+										<input type="checkbox" value="">血源管理科
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" value="">机采成分科
+										</label>
+									<label class="checkbox-inline">
+										<input type="checkbox"value="">科教信息科
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" value="">血源管理科
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" value="">机采成分科
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox"value="">科教信息科
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" value="">血源管理科
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" value="">机采成分科
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox"value="">科教信息科
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" value="">血源管理科
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" value="">机采成分科
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox"value="">科教信息科
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" value="">血源管理科
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" value="">机采成分科
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox"value="">科教信息科
+								</label>
+								</div>
+								<div class="checkbox mt-checkbox-select-all">
+									<label class="checkbox-inline">
+										<input type="checkbox" value="1">全部选择
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" value="0">全部取消
+									</label>
+								</div>
+								<p class="mt-tip">说明：请在此处勾选“可查阅部门”，表示该部门人员以及审批（经办）过此工单的人员均具有查阅权限。</p>
+							</td>
+						</tr>
+						<tr>
+							<td>附件</td>
+							<td colspan="3">
+								<div class="upload-file">
+									<div class="uf-button">
+										<button id="uf-btn-upload" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>添加</button>
+										<form id="uf-form" method="post" action="/upload" target="uf-frame" encoding="multipart/form-data" enctype="multipart/form-data">
+											<input id="uf-input-upload" type="file" />
+										</form>
+										<iframe id="uf-frame" name="uf-frame" src="" style="visibility:hidden;height: 0;border: 0;"></iframe>
+									</div>
+									<div class="uf-file-list" data-delUrl="url">
+										<p>广州血液中心.doc
+											<a href="javascript:;">[删除]</a>
+										</p>
+										<p>广州血液中心.doc
+											<a href="javascript:;">[删除]</a>
+										</p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>领导审批意见</td>
+							<td colspan="3">
+								<textarea class="form-control" rows="3"></textarea>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			<div class="form-table-bottom">
+				<div class="ft-b-left">
+					<div class="ft-b-l-top">
+						<form class="form-inline">
+							<label class="checkbox-inline">选择常用意见&nbsp;:</label>
+							<select name="" class="form-control">
+								<option value="">--------------------------请选择----------------------------</option>
+							</select>
+						</form>
+					</div>
+					<div class="ft-b-l-bottom">
+						<div class="ft-b-l-b-top">
+							填写审批意见&nbsp;:
+							<a href="javascript:;">添加为常用意见</a>
+						</div>
+						<textarea class="form-control" rows="3"></textarea>
+					</div>
+
+				</div>
+				<div class="ft-b-right">
+					<div class="ft-b-r-top">
+						功能操作&nbsp;:
+						<label class="checkbox-inline">
+  							<input type="checkbox"value=""> 同步发送短信通知
+						</label>
+					</div>
+					<div class="ft-b-r-bottom">
+						<div class="ft-b-r-b-left">
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>送科室领导</button>
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>送部门领导</button>
+							<br />
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>送中心领导</button>
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span>退回拟稿人</button>
+						</div>
+						<div class="ft-b-r-b-right">
+							<p>
+								<a id="readFliwImg" href="javascript:;">查看流程图</a>
+							</p>
+							<p>
+								<a href="javascript:;">查看流程跟踪</a>
+							</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--模态框-->
+		<div id="modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="container-fluid">
+							<div class="handle-top">
+								<form class="form-inline">
+									<div class="form-group">
+										<label>拟稿人:</label>
+										<input type="text" class="form-control input-sm">
+									</div>
+									<div class="form-group">
+										<label>标题:</label>
+										<input type="text" class="form-control input-sm">
+									</div>
+									<div class="form-group">
+										<label>拟稿时间:</label>
+										<input type="text" class="form-control input-sm">
+									</div>
+									<button type="button" class="btn btn-default btn-sm">
+										<span class="glyphicon glyphicon-search"></span>
+										查询
+									</button>
+									<button type="button" class="btn btn-default btn-sm">
+										<span class="glyphicon glyphicon-repeat"></span>
+										重置
+									</button>
+								</form>
+							</div>
+							<div class="data-table">
+								<table class="table table-bordered table-hover">
+									<thead>
+										<tr>
+											<th>选择</th>
+											<th>No.</th>
+											<th>拟稿人</th>
+											<th>拟稿时间</th>
+											<th>标题</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><input type="radio" name="t-radio" data-id="1" /></td>
+											<td>1</td>
+											<td>test</td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td><input type="radio" name="t-radio" data-id="2" /></td>
+											<td>2</td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td><input type="radio" name="t-radio" data-id="3" /></td>
+											<td>3</td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="page">
+								<ul class="pagination pagination-sm">
+									<li class="disabled">
+										<span href="#" aria-label="Previous">
+											<span aria-hidden="true">&laquo;</span>
+										</span>
+									</li>
+									<li class="active">
+										<span href="#">1</span></li>
+									<li>
+										<span href="#">2</span></li>
+									<li>
+										<span href="#">3</span></li>
+									<li>
+										<span href="#">4</span></li>
+									<li>
+										<span href="#">5</span></li>
+									<li>
+										<span href="#" aria-label="Next">
+											<span aria-hidden="true">&raquo;</span>
+										</span>
+									</li>
+									<li class="li-page-handle">
+										转到第
+										<input type="text" class="form-control input-sm" /> 页
+										<button type="button" class="btn btn-default btn-sm">
+										GO
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button id="m-btn-sure" type="button" class="btn btn-primary">
+							保存
+						</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							关闭
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--模态框end-->
+		<script type="text/javascript" src="../../vendor/jquery1.9.min.js"></script>
+		<script type="text/javascript" src="../../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../vendor/es5-shim/es5-shim.min.js"></script>
+		<script type="text/javascript" src="../../vendor/es5-shim/es5-sham.min.js"></script>
+		<script type="text/javascript" src="../../vendor/template-web-min.js"></script>
+		<script type="text/javascript" src="../../vendor/jquery.my-message/js/jquery.my-message.1.1.js"></script>
+		<script type="text/javascript" src="../../js/public.js"></script>
+		<script type="text/javascript">
+			//中间的表格操作
+			var $mid_table = $('.mid-table');
+			//选择
+			$mid_table.find('#mt-btn-select').on('click', function() {
+				var $checkeds = $mid_table.find('tbody input[type="checkbox"]:checked');
+				if(!$checkeds.length) {
+					message.add("请先选择一条或多条数据", "warning");
+				} else {
+					$modal.modal('show');
+				}
+			});
+			//添加
+			$mid_table.find('#mt-btn-add').on('click', function() {
+				var mt_tr_html = template('mt-tr');
+				$("#mt-tr").parent('tbody').append(mt_tr_html);
+
+			});
+			//删除
+			$mid_table.find('#mt-btn-del').on('click', function() {
+				var $checkeds = $mid_table.find('tbody input[type="checkbox"]:checked');
+				if($checkeds.length) {
+					$checkeds.each(function(index, Element) {
+						$(this).parents('tr').remove();
+					});
+				} else {
+					message.add("请先选择一条或多条数据", "warning")
+				}
+
+				if(!$mid_table.find('td input[type="checkbox"]').length) {
+					$mid_table.find('th input[type="checkbox"]').prop('checked', false);
+				}
+			});
+			//模态框操作
+			var $modal = $("#modal"),
+				m_select_data = null;
+			$modal.on('show.bs.modal', function(e) {
+				m_select_data = null;
+				$modal.find('.table').find('input[type="radio"]').attr("checked", false);
+			})
+
+			//模态框中的确定按钮
+			$modal.find("#m-btn-sure").on('click', function() {
+				var $radioChecked = $modal.find('.table').find('input[type="radio"]:checked');
+				if($radioChecked.length) { //模态框的表格中有选中的
+					console.log($radioChecked.attr('data-id'));
+					var data_id = $radioChecked.attr('data-id');
+					var $checkeds = $mid_table.find('tbody input[type="checkbox"]:checked');
+					$checkeds.each(function(index, Element) {
+						var $tds = $(this).parents('tr').find('input');
+						//code
+						$tds.eq(1).val(data_id);
+						$tds.eq(2).val(data_id);
+						$tds.eq(3).val(data_id);
+					});
+					$modal.modal('hide');
+				} else {
+					message.add("请先选择数据", "error");
+				}
+			});
+			//可查阅部门的多选
+			var $mt_c_select_all = $('.mt-checkbox-select-all'),
+				$mt_c_list = $('.mt-checkbox-list');
+			$mt_c_select_all.on('change', 'input[type="checkbox"]', function(e) {
+				if(e.target.value == '1') {
+					$mt_c_select_all.find('input[type="checkbox"]').eq(1).prop('checked', false);
+					if($(this).is(':checked')) {
+						$mt_c_list.find('input[type="checkbox"]').prop('checked', true);
+					} else {
+						$mt_c_list.find('input[type="checkbox"]').prop('checked', false);
+
+					}
+				} else if(e.target.value == '0') {
+					if($mt_c_list.find('input[type="checkbox"]:checked').length) {
+						$mt_c_select_all.find('input[type="checkbox"]').eq(0).prop('checked', false);
+						$mt_c_list.find('input[type="checkbox"]').prop('checked', false);
+					} else {
+						$(this).prop('checked', false);
+					}
+
+				}
+			});
+			$mt_c_list.on('change', 'input[type="checkbox"]', function() {
+				if($mt_c_list.find('input[type="checkbox"]').length == $mt_c_list.find('input[type="checkbox"]:checked').length) {
+					$mt_c_select_all.find('input[type="checkbox"]').eq(0).prop('checked', true);
+				} else {
+					$mt_c_select_all.find('input[type="checkbox"]').eq(0).prop('checked', false);
+				}
+			});
+			//功能操作
+			;
+			(function() {
+				var win_screen = {
+					h: window.screen.height,
+					w: window.screen.width
+				}
+				$(".ft-b-r-b-left").on("click", "button", function() {
+					window.open('../public/submitToDealWith.html', '提交办理', 'height=503, width=760, top=' + (win_screen.h - 503) / 2 + ', left=' + (win_screen.w - 760) / 2 + ', toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
+				});
+				$("#readFliwImg").on("click", function() {
+					window.open('../public/flowImg.html', '查看流程图', 'height=705, width=817, top=' + (win_screen.w - 705) / 2 + ', left=' + (win_screen.w - 817) / 2 + ', toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
+				});
+			})();
+		</script>
+	</body>
+
+</html>

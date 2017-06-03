@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>宣传信息类别管理</title>
+		<link rel="stylesheet" href="../../../vendor/bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../../vendor/bootstrap-treeview/dist/bootstrap-treeview.min.css" />
+		<link rel="stylesheet" href="../../../css/public.css" />
+		<link rel="stylesheet" href="../../../css/categoryManagement.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid category-management">
+			<div class="handle-top">
+				<form class="form-inline">
+					<div class="form-group">
+						<label>类别:</label>
+						<input type="text" class="form-control input-sm">
+					</div>
+					<div class="form-group">
+						<label>媒介:</label>
+						<input type="text" class="form-control input-sm">
+					</div>
+					<button type="button" class="btn btn-default btn-sm">
+						<span class="glyphicon glyphicon-search"></span>
+						查询
+					</button>
+					<button type="button" class="btn btn-default btn-sm">
+						<span class="glyphicon glyphicon-repeat"></span>
+						重置
+					</button>
+				</form>
+			</div>
+			<div class="handle-button-group">
+				<button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target=".bs-example-modal-lg">
+					<span class="glyphicon glyphicon-plus"></span>
+					新建</button>
+				<button type="button" class="btn btn-default btn-sm">
+					<spam class="glyphicon glyphicon-remove"></spam>
+					删除</button>
+			</div>
+			<div class="data-table">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th><input type="checkbox" /></th>
+							<th>No.</th>
+							<th>标题(内容)</th>
+							<th>状态</th>
+							<th>创建人</th>
+							<th>最后修改时间</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>1</td>
+							<td>
+								<a href="javascript:;" class="cmt-tree L1">电视媒体</a>
+							</td>
+							<td>1114</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>2</td>
+							<td>
+								<a href="javascript:;" class="cmt-tree L2">广东卫视</a>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>3</td>
+							<td>
+								<a href="javascript:;" class="cmt-tree L3">南方卫视</a>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>4</td>
+							<td>
+								<a href="javascript:;" class="cmt-tree L4">南方卫视</a>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>5</td>
+							<td>
+								<a href="javascript:;" class="cmt-tree L5">南方卫视</a>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>6</td>
+							<td>
+								<a href="javascript:;" class="cmt-tree L6">南方卫视</a>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!--模态框-->
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="modal-table">
+							<h3>宣传信息类别配置</h3>
+							<table class="table table-bordered">
+								<tbody>
+									<tr>
+										<td>
+											<span class="font-red">*</span> 上级目录
+										</td>
+										<td>
+											<div class="mt-select">
+												<input type="text" class="form-control input-sm">
+												<div id="tree"></div>
+											</div>
+										</td>
+										<td>
+											<span class="font-red">*</span> 排序号
+										</td>
+										<td>
+											<input type="text" class="form-control input-sm">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="font-red">*</span> 名称(内容)
+										</td>
+										<td colspan="3">
+
+											<input type="text" class="form-control input-sm">
+
+										</td>
+
+									</tr>
+									<tr>
+										<td>
+											<span class="font-red">*</span> 状态
+										</td>
+										<td>
+											<label class="radio-inline">
+													<input checked="ture" type="radio"value=""name="inlineRadioOptions"> 启用
+												</label>
+											<label class="radio-inline">
+													<input type="radio"value=""name="inlineRadioOptions"> 禁用
+												</label>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">保存</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--模态框end-->
+		<script type="text/javascript" src="../../../vendor/jquery1.9.min.js"></script>
+		<script type="text/javascript" src="../../../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../../vendor/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+		<script>
+			var $tree = $("#tree"),
+				$selectInput = $(".mt-select input");
+			$selectInput.on("click", function() {
+				$tree.slideToggle(200);
+				return false;
+			});
+			$('.modal').on('click', function() {
+				$tree.slideUp(200);
+			})
+
+			function getTree() {
+				var tree = [{
+						text: "Parent 1",
+						id: "001",
+						nodes: [{
+								id: '0011',
+								text: "Child 1",
+								nodes: [{
+										id: '00111',
+										text: "Grandchild 1"
+									},
+									{
+										id: '00112',
+										text: "Grandchild 2"
+									}
+								]
+							},
+							{
+								id: '0012',
+								text: "Child 2"
+							}
+						]
+					},
+					{
+						id: '002',
+						text: "Parent 2"
+					},
+					{
+						id: '003',
+						text: "Parent 3"
+					},
+					{
+						id: '004',
+						text: "Parent 4"
+					},
+					{
+						id: '005',
+						text: "Parent 5"
+					}
+				];
+				return tree;
+			}
+
+			$tree.treeview({
+				data: getTree(),
+				showBorder: false,
+			});
+			$tree.on('nodeSelected', function(event, data) {
+				//console.log(data);
+				$selectInput.val(data.text);
+				$selectInput.data('treeId', data.id)
+				if(!data.nodes) {
+					$tree.slideUp(200);
+					console.log($selectInput.data('treeId'))
+
+				};
+			});
+			$tree.on('click', function() {
+				return false;
+			});
+		</script>
+	</body>
+
+</html>

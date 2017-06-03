@@ -1,0 +1,131 @@
+$border-color-blue:rgb(157, 189, 255)!default;
+$font-color-blue:rgb(0, 102, 153)!default;
+$font-bg-color:rgb(217, 230, 255)!default;
+$select-margin-left:21px!default;
+.submit-to-deal-with {
+    width: 760px;
+    height: 503px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 10px;
+    ul {
+        padding: 0;
+    }
+    li {
+        list-style: none;
+    }
+    .stodw-main {
+        overflow: hidden;
+    }
+    .stdw-title {
+        padding: 5px;
+        border: 1px solid #fff;
+        border-bottom: none;
+        color: $font-color-blue;
+        font-weight: bold;
+    }
+    .active {
+        .stdw-title {
+            background-color: $font-bg-color;
+            border-color: $border-color-blue;
+        }
+    }
+    .stdw-content {
+        padding: 10px;
+        border: 1px solid $border-color-blue;
+        width: 100%;
+        height: 378px;
+    }
+    @mixin stdw() {
+        float: left;
+        width: 200px;
+        min-height: 400px;
+    }
+    @mixin content() {
+        border: 1px solid #ddd;
+        height: 100%;
+        overflow: auto;
+        padding: 5px;
+    }
+    @mixin longText() {
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .stdw-organization {
+        @include stdw;
+        margin-right: 20px;
+        .stdw-content {
+            .select {
+                @include content;
+            }
+        }
+    }
+    @mixin nameList() {
+        li {
+            max-width: 100%;
+            width: 100%;
+            line-height: 21px;
+            padding: 3px 0;
+            i {
+                color: $font-color-blue;
+                vertical-align: middle;
+            }
+            span {
+                @include longText;
+                display: inline-block;
+                cursor: default;
+                width: calc(100% - 20px);
+                vertical-align: middle;
+            }
+            &:hover {
+                background-color: $font-bg-color;
+            }
+        }
+        li.active {
+            background-color: $font-bg-color;
+            color: $font-color-blue;
+        }
+    }
+    .stdw-candidates {
+        @include stdw;
+        .stdw-c-list {
+            @include content;
+            @include nameList;
+        }
+    }
+    .stdw-selected {
+        @include stdw;
+        .stdw-s-list {
+            @include content;
+            @include nameList;
+        }
+    }
+    .stdw-handle {
+        @include stdw;
+        padding: 0 20px;
+        width: auto;
+        button {
+            display: block;
+            margin-top: 20px;
+            outline: none!important;
+            &:first-child {
+                margin-top: 180px;
+            }
+        }
+    }
+    .stdw-close {
+        text-align: center;
+        button {
+            outline: none!important;
+            padding: {
+                left: 15px;
+                right: 15px;
+            }
+            &:first-child {
+                margin-right: 30px;
+            }
+        }
+    }
+}

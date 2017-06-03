@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>新建宣传信息发布</title>
+		<link rel="stylesheet" href="../../../vendor/bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../../css/public.css" />
+		<link rel="stylesheet" href="../../../css/publishApply.css" />
+		<link rel="stylesheet" href="../../../vendor/jquery.my-message/css/jquery.my-message.1.1.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid setMaxWidth publish-apply">
+			<div class="form-table">
+				<div class="ft-top">
+					<h3 class="text-center">宣传信息发布申请</h3>
+					<p class="ft-t-state">
+						状态&nbsp;:&nbsp;待审批
+					</p>
+				</div>
+				<table class="table table-bordered">
+					<tbody>
+						<tr>
+							<td>申请部门</td>
+							<td></td>
+							<td>申请时间</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>申请人</td>
+							<td></td>
+							<td>联系电话</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><span class="font-red">*</span>标题</td>
+							<td colspan="3">
+								<input type="text" class="form-control" />
+							</td>
+						</tr>
+						<tr>
+							<td><span class="font-red">*</span>类别</td>
+							<td colspan="3">
+								<label class="checkbox-inline">
+									<input type="checkbox"value=""> 电视媒体类
+									</label>
+								<label class="checkbox-inline">
+  										<input type="checkbox"value=""> 网络媒体类
+								</label>
+								<label class="checkbox-inline">
+  									<input type="checkbox"value="">电梯海报类
+								</label>
+								<label class="checkbox-inline">
+  								<input type="checkbox"value=""> 新闻稿件类
+								</label>
+								<label class="checkbox-inline">
+  									<input type="checkbox"value="">微博微信类
+								</label>
+								<label class="checkbox-inline">
+  									<input type="checkbox"value=""> 其它
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="font-red">*</span>发布媒介(对象)</td>
+							<td colspan="3">
+								新闻稿件类&nbsp;:&nbsp;
+								<label class="checkbox-inline">
+  									<input type="checkbox"value=""> 广州日报
+								</label>
+								<label class="checkbox-inline">
+  									<input type="checkbox"value=""> 南方都市报
+								</label>
+								<label class="checkbox-inline">
+  									<input type="checkbox"value=""> 南方周末报
+								</label>
+								<br /> 微博微信类&nbsp;:&nbsp;
+								<label class="checkbox-inline">
+  									<input type="checkbox"value=""> 中心微博
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>信息发布(投放)开始时间</td>
+							<td>
+								<input type="date" class="form-control" />
+							</td>
+							<td>信息发布(投放)结束时间</td>
+							<td>
+								<input type="date" class="form-control" />
+							</td>
+						</tr>
+						<tr>
+							<td>投放平台</td>
+							<td colspan="3">
+								<span>新浪微博</span>
+								<span>微信平台</span>
+								<span>中心网站</span>
+							</td>
+						</tr>
+						<tr>
+							<td>内容</td>
+							<td colspan="3">
+								<textarea class="form-control" rows="3"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>备注</td>
+							<td colspan="3">
+								<textarea class="form-control" rows="3"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>附件</td>
+							<td colspan="3">
+								<div class="upload-file">
+									<div class="uf-button">
+										<button id="uf-btn-upload" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>添加</button>
+										<form id="uf-form" method="post" action="/upload" target="uf-frame" encoding="multipart/form-data" enctype="multipart/form-data">
+											<input id="uf-input-upload" type="file" />
+										</form>
+										<iframe id="uf-frame" name="uf-frame" src="" style="visibility:hidden;height: 0;border: 0;"></iframe>
+									</div>
+									<div class="uf-file-list" data-delUrl="url">
+										<p>广州血液中心.doc
+											<a href="javascript:;">[删除]</a>
+										</p>
+										<p>广州血液中心.doc
+											<a href="javascript:;">[删除]</a>
+										</p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>领导审批意见</td>
+							<td colspan="3">
+								<textarea class="form-control" rows="3"></textarea>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="form-table-bottom">
+				<div class="ft-b-left">
+					<div class="ft-b-l-top">
+						<form class="form-inline">
+							<label class="checkbox-inline">选择常用意见&nbsp;:</label>
+							<select name="" class="form-control">
+								<option value="">--------------------------请选择----------------------------</option>
+							</select>
+						</form>
+					</div>
+					<div class="ft-b-l-bottom">
+						<div class="ft-b-l-b-top">
+							填写审批意见&nbsp;:
+							<a href="javascript:;">添加为常用意见</a>
+						</div>
+						<textarea class="form-control" rows="3"></textarea>
+					</div>
+
+				</div>
+				<div class="ft-b-right">
+					<div class="ft-b-r-top">
+						功能操作&nbsp;:
+						<label class="checkbox-inline">
+  							<input type="checkbox"value=""> 同步发送短信通知
+						</label>
+					</div>
+					<div class="ft-b-r-bottom">
+						<div class="ft-b-r-b-left">
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>送科室领导</button>
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>送部门领导</button>
+							<br />
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>送中心领导</button>
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span>退回拟稿人</button>
+						</div>
+						<div class="ft-b-r-b-right">
+							<p>
+								<a id="readFliwImg" href="javascript:;">查看流程图</a>
+							</p>
+							<p>
+								<a href="javascript:;">查看流程跟踪</a>
+							</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../../vendor/jquery1.9.min.js"></script>
+		<script type="text/javascript" src="../../../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../../vendor/jquery.my-message/js/jquery.my-message.1.1.js"></script>
+		<script type="text/javascript" src="../../../js/public.js"></script>
+		<script type="text/javascript">
+			var winH = window.screen.height,
+				winW = window.screen.width;
+			$(".ft-b-r-b-left").on("click", "button", function() {
+				window.open('../../public/submitToDealWith.html', '提交办理', 'height=503, width=760, top=' + (winH - 503) / 2 + ', left=' + (winW - 760) / 2 + ', toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
+			});
+			$("#readFliwImg").on("click", function() {
+				window.open('../../public/flowImg.html', '查看流程图', 'height=705, width=817, top=' + (winH - 705) / 2 + ', left=' + (winW - 817) / 2 + ', toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
+			})
+		</script>
+	</body>
+
+</html>

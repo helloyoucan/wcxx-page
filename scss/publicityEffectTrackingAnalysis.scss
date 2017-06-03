@@ -1,0 +1,41 @@
+@charset "utf-8";
+.publicity-effect-tracking-analysis {
+    .m-title {
+        background-image: url(../img/menu-title-bg-2.png);
+    }
+    ul.m-content {
+        margin: 0;
+        padding: 15px 0 15px 40px;
+        li.m-c-item {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 300px;
+            a {
+                display: block;
+                border: 1px solid #ddd;
+                padding: 10px;
+                overflow: hihidden;
+                background-color: #DDDDFF;
+                &:hover {
+                    text-decoration: none;
+                    span {
+                        color: #999;
+                    }
+                }
+                img {
+                    width: 70px;
+                    height: 70px;
+                    margin-right: 10px;
+                }
+                span {
+                    font-family: "微软雅黑";
+                    font-weight: bold;
+                    font-size: 18px;
+                    color: #555;
+                }
+            }
+        }
+    }
+}

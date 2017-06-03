@@ -1,0 +1,31 @@
+.make-to-apply-for {
+    .mid-table {
+        .table {
+            tr {
+                &:first-child {
+                    td:first-child {
+                        background-color: white;
+                    }
+                    td:first-child+td,
+                    td:first-child+td+td+td {
+                        width: 150px;
+                        background-color: #F7F7F7;
+                        font-weight: bold;
+                        text-align: center;
+                        vertical-align: middle;
+                    }
+                    td:first-child+td+td {
+                        width: auto;
+                        background-color: white;
+                    }
+                }
+                td:first-child+td+td {
+                    width: 150px;
+                    background-color: #F7F7F7;
+                    font-weight: bold;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

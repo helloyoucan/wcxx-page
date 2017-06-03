@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>宣传信息发布列表</title>
+		<link rel="stylesheet" href="../../../vendor/bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../../css/public.css" />
+		<link rel="stylesheet" href="../../../css/infoList.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid setMinWidth info-list">
+			<div class="handle-top">
+				<form class="form-inline">
+					<div class="form-group">
+						<label>标题:</label>
+						<input type="text" class="form-control input-sm">
+					</div>
+					<div class="form-group">
+						<label>申请人:</label>
+						<input type="text" class="form-control input-sm">
+					</div>
+					<div class="form-group">
+						<label>申请时间:</label>
+						<input type="date" class="form-control input-sm">
+					</div>
+					<div class="form-group">
+						<label>类别:</label>
+						<select name="" class="form-control input-sm">
+							<option value="">全部</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>状态:</label>
+						<select name="" class="form-control input-sm">
+							<option value="">全部</option>
+						</select>
+					</div>
+					<button type="button" class="btn btn-default btn-sm">
+						<span class="glyphicon glyphicon-search"></span>
+						查询
+					<tton>
+					<button type="button" class="btn btn-default btn-sm">
+						<span class="glyphicon glyphicon-repeat"></span>
+						重置
+					<tton>
+				</form>
+			</div>
+			<div class="handle-button-group">
+				<a href="publishApply.html" class="btn btn-default btn-sm">
+					<span class="glyphicon glyphicon-plus"></span> 新建
+				</a>
+				<a href="publishApply.html" class="btn btn-default btn-sm">
+					<span class="glyphicon glyphicon-file"></span> 归档
+				</a>
+				<button type="button" class="btn btn-default btn-sm">
+					<spam class="glyphicon glyphicon-remove"></spam>
+					删除<tton>
+			</div>
+			<div class="data-table">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th><input type="checkbox" /></th>
+							<th>No.</th>
+							<th>标题</th>
+							<th>类别</th>
+							<th>发布媒介</th>
+							<th>申请人</th>
+							<th>申请时间</th>
+							<th>状态</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>1</td>
+							<td>test</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>
+								<span class="font-red">
+								待审批
+							</span>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>2</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>
+								<span>
+								执行中
+							</span>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>3</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>
+								<span>已归档</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="page">
+				<ul class="pagination pagination-sm">
+					<li class="disabled">
+						<span href="#" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</span>
+					<li class="active">
+						<span href="#">1</span>
+					<li>
+						<span href="#">2</span>
+					<li>
+						<span href="#">3</span>
+					<li>
+						<span href="#">4</span>
+					<li>
+						<span href="#">5</span>
+					<li>
+						<span href="#" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						</span>
+					<li class="li-page-handle">
+						转到第
+						<input type="text" class="form-control input-sm" /> 页
+						<button type="button" class="btn btn-default btn-sm">
+							GO
+						<tton>
+					<>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../../vendor/jquery1.9.min.js"></script>
+		<script type="text/javascript" src="../../../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	</body>
+
+</html>

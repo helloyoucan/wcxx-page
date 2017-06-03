@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>宣传物资名称管理列表</title>
+		<link rel="stylesheet" href="../../../vendor/bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../../css/public.css" />
+		<link rel="stylesheet" href="../../../css/theNameOfTheManagementList.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid setMaxWidth the-name-of-the-anagement-list">
+			<div class="handle-top">
+				<form class="form-inline">
+					<div class="form-group">
+						<label>物资名称:</label>
+						<input type="text" class="form-control input-sm">
+					</div>
+					<div class="form-group">
+						<label>登记人:</label>
+						<input type="text" class="form-control input-sm">
+					</div>
+					<div class="form-group">
+						<label>状态:</label>
+						<select name="" class="form-control input-sm">
+							<option value="">全部</option>
+							<select>
+					</div>
+					<button type="button" class="btn btn-default btn-sm">
+						<span class="glyphicon glyphicon-search"></span>
+						查询
+					<tton>
+					<button type="button" class="btn btn-default btn-sm">
+						<span class="glyphicon glyphicon-repeat"></span>
+						重置
+					<tton>
+				</form>
+			</div>
+			<div class="handle-button-group">
+				<button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target=".bs-example-modal-lg">
+					<span class="glyphicon glyphicon-plus"></span>
+					新建
+				</button>
+					<button type="button" class="btn btn-default btn-sm">
+					<span class="glyphicon glyphicon-remove"></span>
+					删除
+				</button>
+			</div>
+			<div class="data-table">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th><input type="checkbox" /></th>
+							<th>No.</th>
+							<th>物资名称</th>
+							<th>单位</th>
+							<th>累计入库</th>
+							<th>累计领用</th>
+							<th>当前库存</th>
+							<th>登记人</th>
+							<th>登记时间</th>
+							<th>状态</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>1</td>
+							<td>test</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>
+								<span>
+								有效
+							</span>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>2</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>
+								<span>
+								有效
+							</span>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>3</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>
+								<span>有效</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="page">
+				<ul class="pagination pagination-sm">
+					<li class="disabled">
+						<span href="#" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</span>
+						<li class="active">
+							<span href="#">1</span>
+							<li>
+								<span href="#">2</span>
+								<li>
+									<span href="#">3</span>
+									<li>
+										<span href="#">4</span>
+										<li>
+											<span href="#">5</span>
+											<li>
+												<span href="#" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+												</span>
+												<li class="li-page-handle">
+													转到第
+													<input type="text" class="form-control input-sm" /> 页
+													<button type="button" class="btn btn-default btn-sm">
+							GO
+						<tton>
+					<>
+				</ul>
+			</div>
+		</div>
+		<!--模态框-->
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="modal-table">
+							<h3>宣传物资名称登记</h3>
+							<table class="table table-bordered">
+								<tbody>
+									<tr>
+										<td>
+											登记人
+										</td>
+										<td>
+										</td>
+										<td>
+											登记时间
+										</td>
+										<td>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											物资名称
+										</td>
+										<td>
+											<input type="text" class="form-control input-sm">
+										</td>
+										<td>
+											单位
+										</td>
+										<td>
+											<input type="text" class="form-control input-sm">
+										</td>
+
+									</tr>
+									<tr>
+										<td>
+											状态
+										</td>
+										<td>
+											<label class="radio-inline">
+													<input checked="ture" type="radio"value=""name="inlineRadioOptions"> 有效
+												</label>
+											<label class="radio-inline">
+													<input type="radio"value=""name="inlineRadioOptions"> 无效
+												</label>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+								</tbody>
+							</table>
+							<p class="mt-tip">
+								说明：以上“物资名称”要求唯一，保存时系统会出相关的检测。
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">保存</button>
+													<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			</div>
+		</div>
+		<!--模态框end-->
+		<script type="text/javascript" src="../../../vendor/jquery1.9.min.js"></script>
+		<script type="text/javascript" src="../../../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	</body>
+
+</html>

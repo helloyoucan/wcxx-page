@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>宣传品(资料)制作统计</title>
+		<link rel="stylesheet" href="../../../vendor/bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../../css/statisticsPagePublic.css" />
+	</head>
+
+	<body>
+
+		<div class="statistics">
+			<h3>宣传品(资料)制作统计</h3>
+			<div class="s-handle-panle">
+				<div class="s-hp-top">
+					<form class="form-inline">
+						<div class="form-group">
+							<label>统计年月&nbsp;:&nbsp;</label>
+							<input type="date" class="form-control input-sm"> -
+							<input type="date" class="form-control input-sm">
+						</div>
+					</form>
+				</div>
+				<div class="s-hp-middle">
+					<form class="form-inline">
+						<div class="form-group">
+							<label>统计方式&nbsp;:&nbsp;</label>
+							<label class="radio-inline">
+  								<input checked="ture" type="radio" name="inlineRadioOptions" value="">数量及完成情况统计
+							</label>
+							<label class="radio-inline">
+  								<input type="radio" name="inlineRadioOptions" value=""> 明细及完成情况统计
+							</label>
+							<label class="radio-inline">
+  								<input type="radio" name="inlineRadioOptions" value=""> 费用情况统计
+							</label>
+						</div>
+						<button type="button" class="btn btn-default btn-sm">
+							导出
+						</button>
+						<button type="button" class="btn btn-default btn-sm">
+							重置
+						</button>
+						<button type="button" class="btn btn-default btn-sm">
+							查询
+						</button>
+					</form>
+				</div>
+				<div class="s-hp-bottom">
+					<form class="form-inline">
+						<div class="form-group">
+							<label>排序&nbsp;:&nbsp;</label>
+							<label class="radio-inline">
+  								<input checked="ture" type="radio" name="inlineRadioOptions2" value=""> 按类别
+							</label>
+							<label class="radio-inline">
+  								<input type="radio" name="inlineRadioOptions2" value=""> 按数量
+							</label><label class="radio-inline">
+  								<input type="radio" name="inlineRadioOptions2" value=""> 按进度
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="s-chart"></div>
+		</div>
+		<script type="text/javascript" src="../../../vendor/jquery1.9.min.js"></script>
+		<script type="text/javascript" src="../../../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	</body>
+
+</html>

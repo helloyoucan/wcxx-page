@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>提交办理</title>
+		<link rel="stylesheet" href="../../vendor/bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/2submitToDealWith.css" />
+		<link rel="stylesheet" href="../../vendor/bootstrap-treeview/dist/bootstrap-treeview.min.css" />
+	</head>
+
+	<body>
+		<div class="submit-to-deal-with">
+			<div class="stodw-main">
+				<div class="stdw-organization active">
+					<div class="stdw-title">组织机构</div>
+					<div class="stdw-content">
+						<div class="select">
+							<div id="tree"></div>
+						</div>
+					</div>
+				</div>
+				<div class="stdw-candidates">
+					<div class="stdw-title">候选人员</div>
+					<div class="stdw-content">
+						<div class="stdw-c-list">
+							<ul>
+								<li>
+									<i class="glyphicon glyphicon-triangle-right"></i>
+									<span title="李白">李白(血管科)</span>
+								</li>
+								<li class="active">
+									<i class="glyphicon glyphicon-triangle-right"></i>
+									<span title="李白">李白李白李白李白李白李白李白李白李白李白</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="stdw-handle">
+					<button class="btn btn-default">全选<span class="glyphicon glyphicon-chevron-right"></span></button>
+					<button class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span>还原</button>
+				</div>
+				<div class="stdw-selected">
+					<div class="stdw-title">选中人员</div>
+					<div class="stdw-content">
+						<div class="stdw-s-list">
+							<ul>
+								<li>
+									<i class="glyphicon glyphicon-triangle-right"></i>
+									<span title="李白">李白</span>
+								</li>
+								<li class="active">
+									<i class="glyphicon glyphicon-triangle-right"></i>
+									<span title="李白">李白</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="checkbox">
+				<label>
+      			<input type="checkbox">发送短信通知
+    		</label>
+			</div>
+			<div class="stdw-close">
+				<button class="btn btn-default">确定</button>
+				<button class="btn btn-default">取消</button>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../../vendor/jquery1.9.min.js"></script>
+		<script type="text/javascript" src="../../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../vendor/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+		<script>
+			var $tree = $("#tree");
+
+			function getTree() {
+				var tree = [{
+						text: "Parent 1",
+						id: "001",
+						nodes: [{
+								id: '0011',
+								text: "Child 1",
+								nodes: [{
+										id: '00111',
+										text: "GrandchildGrandchildGrandchildGrandchildGrandchildGrandchildGrandchildGrandchild 1"
+									},
+									{
+										id: '00112',
+										text: "Grandchild 2"
+									}
+								]
+							},
+							{
+								id: '0012',
+								text: "Child 2"
+							}
+						]
+					},
+					{
+						id: '002',
+						text: "Parent 2"
+					},
+					{
+						id: '003',
+						text: "Parent 3"
+					},
+					{
+						id: '004',
+						text: "Parent 4"
+					},
+					{
+						id: '005',
+						text: "Parent 5"
+					}
+				];
+				return tree;
+			}
+
+			$tree.treeview({
+				data: getTree(),
+				showBorder: false,
+			});
+			$tree.on('nodeSelected', function(event, data) {
+				console.log(data.text + "--" + data.id);
+				if(!data.nodes) {
+					console.log("无后代："+data.text + "--" + data.id);
+
+				};
+			});
+		</script>
+	</body>
+
+</html>

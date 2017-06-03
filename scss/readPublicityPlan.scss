@@ -1,0 +1,52 @@
+@charset "utf-8";
+.read-publicity-plan {
+    .mt-content {
+        border: 1px solid #ddd;
+        border-bottom: none;
+        padding: 10px;
+        ul {
+            padding: 0;
+            margin: 0;
+            >li {
+                list-style: none;
+                margin: 10px 0;
+                >span {
+                    cursor: pointer;
+                    color: #337ab7;
+                    &:first-child {
+                        color: #333;
+                        font-family: "微软雅黑";
+                        cursor: default;
+                        &:hover {
+                            color: #555;
+                        }
+                    }
+                    &:hover {
+                        color: #204d74;
+                    }
+                    i {
+                        color: #337ab7;
+                    }
+                }
+                .panel-collapse {
+                    li {
+                        list-style: initial;
+                        margin-left: 60px;
+                        margin: 10px 0 10px 60px;
+                        color: #555;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal-table {
+    .mt-file {
+        p {
+            margin: 0;
+            font-family: "宋体";
+            font-weight: 600;
+        }
+    }
+}

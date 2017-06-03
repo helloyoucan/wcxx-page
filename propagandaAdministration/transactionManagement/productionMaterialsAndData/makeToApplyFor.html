@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../../vendor/bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../../css/public.css" />
+		<link rel="stylesheet" href="../../../css/makeToApplyFor.css" />
+		<link rel="stylesheet" href="../../../vendor/jquery.my-message/css/jquery.my-message.1.1.css" />
+	</head>
+
+	<body>
+
+		<div class="container-fluid setWidth make-to-apply-for">
+			<div class="form-table">
+				<div class="ft-top">
+					<h3 class="text-center">宣传品（资料）制作申请</h3>
+					<p class="ft-t-state">
+						状态&nbsp;:&nbsp;待审批
+					</p>
+				</div>
+				<table class="table table-bordered">
+					<tbody>
+						<tr>
+							<td>申请部门</td>
+							<td></td>
+							<td>申请时间</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>申请人</td>
+							<td></td>
+							<td>联系电话</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><span class="font-red">*</span>标题</td>
+							<td colspan="3">
+								<input type="text" class="form-control" />
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+				<div class="form-table mid-table">
+					<div class="mt-title">
+						<h4>请在以下表格中填写需要领用的宣传物资</h4>
+					</div>
+					<div class="mt-handle-button-group">
+						<button id="mt-btn-add" class="btn btn-default">添加</button>
+						<button id="mt-btn-del" class="btn btn-default">删除</button>
+					</div>
+					<table class="table table-bordered">
+						<tbody>
+							<tr>
+								<td rowspan="7"><input type="checkbox" /></td>
+								<td>宣传类别</td>
+								<td>
+									<select name="" class="form-control input-sm">
+										<option value="">全部</option>
+									</select>
+								</td>
+								<td>宣传品名称</td>
+								<td><input type="text" class="form-control" /></td>
+							</tr>
+							<tr>
+								<td>制作方式</td>
+								<td colspan="3">
+									<label class="radio-inline">
+										<input type="radio" value="" name="inlineRadioOptions">内部制作
+									</label>
+									<label class="radio-inline">
+										<input type="radio" value="" name="inlineRadioOptions"> 广告公司制作
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<td>要求完成时间</td>
+								<td><input type="text" class="form-control" /></td>
+								<td>规格</td>
+								<td><input type="text" class="form-control" /></td>
+							</tr>
+							<tr>
+								<td>单位</td>
+								<td><input type="text" class="form-control" /></td>
+								<td>制作数量</td>
+								<td><input type="text" class="form-control" /></td>
+							</tr>
+							<tr>
+								<td>广告公司名称</td>
+								<td colspan="3"><input type="text" class="form-control" /></td>
+							</tr>
+							<tr>
+								<td>广告公司联系人</td>
+								<td><input type="text" class="form-control" /></td>
+								<td>广告公司联系方式</td>
+								<td><input type="text" class="form-control" /></td>
+							</tr>
+							<tr>
+								<td>费用（元）</td>
+								<td><input type="text" class="form-control" /></td>
+								<td style="background-color: white;" colspan="2"></td>
+							</tr>
+
+						</tbody>
+					</table>
+					<script id="mt-table" type="text/html">
+						<table class="table table-bordered">
+							<tbody>
+								<tr>
+									<td rowspan="7"><input type="checkbox" /></td>
+									<td>宣传类别</td>
+									<td>
+										<select name="" class="form-control input-sm">
+											<option value="">全部</option>
+										</select>
+									</td>
+									<td>宣传品名称</td>
+									<td><input type="text" class="form-control" /></td>
+								</tr>
+								<tr>
+									<td>制作方式</td>
+									<td colspan="3">
+										<label class="radio-inline">
+										<input type="radio" value="" name="inlineRadioOptions">内部制作
+									</label>
+										<label class="radio-inline">
+										<input type="radio" value="" name="inlineRadioOptions"> 广告公司制作
+									</label>
+									</td>
+								</tr>
+								<tr>
+									<td>要求完成时间</td>
+									<td><input type="text" class="form-control" /></td>
+									<td>规格</td>
+									<td><input type="text" class="form-control" /></td>
+								</tr>
+								<tr>
+									<td>单位</td>
+									<td><input type="text" class="form-control" /></td>
+									<td>制作数量</td>
+									<td><input type="text" class="form-control" /></td>
+								</tr>
+								<tr>
+									<td>广告公司名称</td>
+									<td colspan="3"><input type="text" class="form-control" /></td>
+								</tr>
+								<tr>
+									<td>广告公司联系人</td>
+									<td><input type="text" class="form-control" /></td>
+									<td>广告公司联系方式</td>
+									<td><input type="text" class="form-control" /></td>
+								</tr>
+								<tr>
+									<td>费用（元）</td>
+									<td><input type="text" class="form-control" /></td>
+									<td style="background-color: white;" colspan="2"></td>
+								</tr>
+							</tbody>
+						</table>
+					</script>
+
+				</div>
+				<table class="table table-bordered">
+					<tbody>
+						<tr>
+							<td>总费用(元)</td>
+							<td>
+								<input type="text" class="form-control input-sm" disabled/>
+							</td>
+							<td></td>
+							<td><input style="opacity: 0;" type="text" class="form-control input-sm" /></td>
+						</tr>
+						<tr>
+							<td>备注</td>
+							<td colspan="3">
+								<textarea class="form-control" rows="3"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>附件</td>
+							<td colspan="3">
+								<div class="upload-file">
+									<div class="uf-button">
+										<button id="uf-btn-upload" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>添加</button>
+										<form id="uf-form" method="post" action="/upload" target="uf-frame" encoding="multipart/form-data" enctype="multipart/form-data">
+											<input id="uf-input-upload" type="file" />
+										</form>
+										<iframe id="uf-frame" name="uf-frame" src="" style="visibility:hidden;height: 0;border: 0;"></iframe>
+									</div>
+									<div class="uf-file-list" data-delUrl="url">
+										<p>广州血液中心.doc
+											<a href="javascript:;">[删除]</a>
+										</p>
+										<p>广州血液中心.doc
+											<a href="javascript:;">[删除]</a>
+										</p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>领导审批意见</td>
+							<td colspan="3">
+								<textarea class="form-control" rows="3"></textarea>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			<div class="form-table-bottom">
+				<div class="ft-b-left">
+					<div class="ft-b-l-top">
+						<form class="form-inline">
+							<label class="checkbox-inline">选择常用意见&nbsp;:</label>
+							<select name="" class="form-control">
+								<option value="">--------------------------请选择----------------------------</option>
+							</select>
+						</form>
+					</div>
+					<div class="ft-b-l-bottom">
+						<div class="ft-b-l-b-top">
+							填写审批意见&nbsp;:
+							<a href="javascript:;">添加为常用意见</a>
+						</div>
+						<textarea class="form-control" rows="3"></textarea>
+					</div>
+
+				</div>
+				<div class="ft-b-right">
+					<div class="ft-b-r-top">
+						功能操作&nbsp;:
+						<label class="checkbox-inline">
+  							<input type="checkbox"value=""> 同步发送短信通知
+						</label>
+					</div>
+					<div class="ft-b-r-bottom">
+						<div class="ft-b-r-b-left">
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>送科室领导</button>
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>送部门领导</button>
+							<br />
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>送中心领导</button>
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span>退回拟稿人</button>
+						</div>
+						<div class="ft-b-r-b-right">
+							<p>
+								<a id="readFliwImg" href="javascript:;">查看流程图</a>
+							</p>
+							<p>
+								<a href="javascript:;">查看流程跟踪</a>
+							</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../../vendor/jquery1.9.min.js"></script>
+		<script type="text/javascript" src="../../../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../../vendor/es5-shim/es5-shim.min.js"></script>
+		<script type="text/javascript" src="../../../vendor/es5-shim/es5-sham.min.js"></script>
+		<script type="text/javascript" src="../../../vendor/template-web-min.js"></script>
+		<script type="text/javascript" src="../../../vendor/jquery.my-message/js/jquery.my-message.1.1.js"></script>
+		<script type="text/javascript" src="../../../js/public.js"></script>
+		<script type="text/javascript">
+			var winH = window.screen.height,
+				winW = window.screen.width;
+			$(".ft-b-r-b-left").on("click", "button", function() {
+				window.open('../../public/submitToDealWith.html', '提交办理', 'height=503, width=760, top=' + (winH - 503) / 2 + ', left=' + (winW - 760) / 2 + ', toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
+			});
+			$("#readFliwImg").on("click", function() {
+				window.open('../../public/flowImg.html', '查看流程图', 'height=705, width=817, top=' + (winH - 705) / 2 + ', left=' + (winW - 817) / 2 + ', toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
+			});
+			//添加
+			$mid_table = $('.mid-table');
+			$mid_table.find('#mt-btn-add').on('click', function() {
+				var mt_tr_html = template('mt-table');
+				$("#mt-table").parent('div').append(mt_tr_html);
+
+			});
+			//删除
+			$mid_table.find('#mt-btn-del').on('click', function() {
+				var $checkeds = $mid_table.find('input[type="checkbox"]:checked');
+				if($checkeds.length) {
+					$checkeds.each(function(index, Element) {
+						$(this).parents('table').remove();
+					});
+				} else {
+					message.add("请先选择一条或多条数据", "warning")
+				}
+
+				if(!$mid_table.find('td input[type="checkbox"]').length) {
+					$mid_table.find('th input[type="checkbox"]').prop('checked', false);
+				}
+			});
+		</script>
+	</body>
+
+</html>

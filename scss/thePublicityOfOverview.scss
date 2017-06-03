@@ -1,0 +1,84 @@
+@charset "utf-8";
+.the-publicity-of-overview {
+    font-family: "微软雅黑";
+    .font-orange {
+        color: orange;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .tpoo-title {
+        border-bottom: 1px solid #ddd;
+        background-color: #E9F0F5;
+        font-size: 14px;
+        font-weight: bold;
+        height: 35px;
+        line-height: 35px;
+        .tpoo-t-icon-left,
+        .tpoo-t-icon-right {
+            display: inline-block;
+            width: 22px;
+            height: 35px;
+            background-size: 22px 22px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .tpoo-t-icon-left {
+            float: left;
+            background-image: url(../img/chart.png);
+        }
+        .tpoo-t-icon-right {
+            float: right;
+            background-image: url(../img/update.png);
+        }
+    }
+    .tpoo-left {
+        border: 1px solid #ddd;
+        width: 250px;
+        height: 715px;
+        float: left;
+        .tpoo-title {
+            .tpoo-t-icon-left {
+                background-image: url(../img/start.png);
+            }
+        }
+        .tpoo-l-content {
+            padding: 0 10px;
+            >div {
+                border-top: 1px solid #ddd;
+                padding: 10px 0;
+                &:first-child {
+                    border-top: 0;
+                }
+                p {
+                    margin: 0;
+                    font-size: 12px;
+                    padding-left: 15px;
+                    &:first-child {
+                        //                      padding-left: 0;
+                        font-size: 14px;
+                    }
+                    i {
+                        margin-left: -14px;
+                        color: rgb(88, 130, 209);
+                    }
+                }
+            }
+        }
+    }
+    .tpoo-right {
+        margin-left: 250px;
+        height: 700px;
+        .col-xs-12,
+        .col-xs-6 {}
+        .tpoo-title {
+            border: 1px solid #ddd;
+        }
+       
+    }
+} .tpoo-r-chart {
+            border: 1px solid #ddd;
+            border-top: none;
+            height: 200px;
+            margin-bottom: 5px;
+            padding: 5px;
+        }

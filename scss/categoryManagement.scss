@@ -1,0 +1,84 @@
+$bg-color:#F7F7F7 !default;
+.category-management {
+    .handle-top {
+        .form-group {
+            input[type="text"].form-control {
+                width: 150px;
+            }
+        }
+    }
+    .data-table {
+        .table {
+            td {
+                .cmt-tree {
+                    display: inline-block;
+                    background-image: url(../img/minus.gif);
+                    background-repeat: no-repeat;
+                    background-position: 6px 6px;
+                    padding-left: 21px;
+                }
+                .cmt-tree.L1 {
+                    margin-left: 0;
+                }
+                .cmt-tree.L2 {
+                    margin-left: 20px;
+                }
+                .cmt-tree.L3 {
+                    margin-left: 40px;
+                }
+                .cmt-tree.L4 {
+                    margin-left: 60px;
+                }
+                .cmt-tree.L5 {
+                    margin-left: 80px;
+                }
+                .cmt-tree.L6 {
+                    margin-left: 100px;
+                }
+            }
+        }
+    }
+}
+
+.modal-table {
+    .mt-select {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            right: 5px;
+            top: 10px;
+            width: 0;
+            height: 0;
+            border: 10px solid #555;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom: none;
+        }
+        input {
+            padding-right: 30px;
+            cursor: pointer;
+        }
+        input[disabled] {
+            background-color: white;
+            cursor: default;
+        }
+        div#tree {
+            display: none;
+            position: absolute;
+            z-index: 999;
+            left: 0;
+            right: 0;
+            border: 1px solid #ddd;
+            max-height: 300px;
+            overflow: auto;
+            border-radius: 4px;
+            ul.list-group{
+                margin-bottom: 0;
+                .list-group-item{
+                    padding: 1px;
+                }
+            }
+        }
+    }
+}

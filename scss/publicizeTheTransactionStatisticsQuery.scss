@@ -1,0 +1,81 @@
+@charset "utf-8";
+.publicize-the-transaction-statistics-query {
+    .m-title {
+        background-image: url(../img/menu-title-bg-2.png);
+    }
+    ul.m-content {
+        overflow: hidden;
+        padding: 20px 0 20px 40px;
+        margin: 0;
+        li.m-c-item {
+            list-style: none;
+            float: left;
+            margin: 0 30px 20px 0;
+            border: 1px solid #ddd;
+            width: 300px;
+            a {
+                display: block;
+                padding: 15px;
+                background-color: #F6F6F6;
+                &:hover {
+                    text-decoration: none;
+                }
+                img {
+                    width: 70px;
+                    height: 70px;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+.query {
+    ul.m-content {
+        li.m-c-item {
+            a {
+                &:hover {
+                    span {
+                        color: #999;
+                    }
+                }
+                span {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #555;
+                }
+            }
+        }
+    }
+}
+
+.statistics {
+    ul.m-content {
+        li.m-c-item {
+            a {
+                height: 110px;
+                overflow: hihidden;
+                &:hover {
+                    h4,span {
+                        color: #999;
+                    }
+                }
+                img {
+                    float: left;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+                h4 {
+                    font-weight: bold;
+                    font-size: 18px;
+                    color: #555;
+                }
+                span {
+                    font-family: "微软雅黑";
+                    font-size: 12px;
+                    color: #555;
+                }
+            }
+        }
+    }
+}

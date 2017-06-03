@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>宣传事务概览详情</title>
+		<link rel="stylesheet" href="../../vendor/bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/thePublicityOfOverview.css" />
+	</head>
+
+	<body>
+		<div class="setMinWidth the-publicity-of-overview">
+			<div class="tpoo-left">
+				<div class="tpoo-title">
+					<span class="tpoo-t-icon-left"></span> 本年度宣传管理数据小档案
+					<span class="tpoo-t-icon-right"></span>
+				</div>
+				<div class="tpoo-l-content">
+					<div>
+						<p><i class="glyphicon glyphicon-triangle-right"></i>宣传计划<span class="font-orange">13</span>项，完成<span class="font-orange">15 </span>项</p>
+					</div>
+					<div>
+						<p><i class="glyphicon glyphicon-triangle-right"></i>宣传方案 <span class="font-orange">16</span>项，完成<span class="font-orange">10</span>项</p>
+					</div>
+					<div>
+						<p><i class="glyphicon glyphicon-triangle-right"></i>信息发布：</p>
+						<p>电视媒体类<span class="font-orange">24</span>项</p>
+						<p>网络媒体类<span class="font-orange">12</span>项</p>
+						<p>电梯海报类<span class="font-orange">7</span>项</p>
+						<p>新闻稿件类<span class="font-orange">5</span>项</p>
+						<p>微博微信类<span class="font-orange">28</span>项</p>
+						<p>其他 <span class="font-orange">2</span>项</p>
+					</div>
+					<div>
+						<p><i class="glyphicon glyphicon-triangle-right"></i>宣传品(资料)制作<span class="font-orange">15</span>项，完成<span class="font-orange">12</span>项</p>
+						<p>内部制作<span class="font-orange">10</span>项</p>
+						<p>广告公司制作<span class="font-orange">5</span>项</p>
+						<p>总费用<span class="font-orange">3980.00</span>元</p>
+					</div>
+					<div>
+						<p><i class="glyphicon glyphicon-triangle-right"></i>宣传物资领用 <span class="font-orange">89</span>项</p>
+					</div>
+				</div>
+
+			</div>
+			<div class="tpoo-right">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="tpoo-title">
+								<span class="tpoo-t-icon-left"></span> 本月宣传计划统计
+								<span class="tpoo-t-icon-right"></span>
+							</div>
+							<div id="chart1" class="tpoo-r-chart">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="tpoo-title">
+								<span class="tpoo-t-icon-left"></span> 本月宣传方案统计
+								<span class="tpoo-t-icon-right"></span>
+							</div>
+							<div class="tpoo-r-chart"></div>
+						</div>
+						<div class="col-xs-6">
+							<div class="tpoo-title">
+								<span class="tpoo-t-icon-left"></span> 近5月宣传品(资料)制作申请统计
+								<span class="tpoo-t-icon-right"></span>
+							</div>
+							<div class="tpoo-r-chart"></div>
+						</div>
+						<div class="col-xs-6">
+							<div class="tpoo-title">
+								<span class="tpoo-t-icon-left"></span> 近5月宣传物资领用统计
+								<span class="tpoo-t-icon-right"></span>
+							</div>
+							<div class="tpoo-r-chart"></div>
+						</div>
+						<div class="col-xs-12">
+							<div class="tpoo-title">
+								<span class="tpoo-t-icon-left"></span> 本月宣传信息发布统计
+								<span class="tpoo-t-icon-right"></span>
+							</div>
+							<div class="tpoo-r-chart"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../vendor/jquery1.9.min.js"></script>
+		<script type="text/javascript" src="../../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../vendor/Chart.js/list/chart.js"></script>
+		<script type="text/javascript" src="../../vendor/echarts.js"></script>
+
+		<script>
+			var myChart = echarts.init(document.getElementById('chart1'));
+			option = {
+				color: ['#3398DB'],
+				tooltip: {
+					trigger: 'axis',
+					axisPointer: { // 坐标轴指示器，坐标轴触发有效
+						type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+					}
+				},
+				grid: {
+					left: '0%',
+					right: '0%',
+					bottom: '0%',
+					top: "10%",
+					containLabel: true
+				},
+				xAxis: [{
+					type: 'category',
+					data: ['宣传计划', '经费预算计划', '纪念品采购', '物料计划'],
+					axisTick: {
+						alignWithLabel: true
+					}
+				}],
+				yAxis: [{
+					type: 'value'
+				}],
+				series: [{
+					type: 'bar',
+					barWidth: '50%',
+					data: [16, 32, 15, 22]
+				}]
+			};
+			myChart.setOption(option);
+		</script>
+	</body>
+
+</html>
