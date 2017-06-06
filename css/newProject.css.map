@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACI,wBAAY,CACR,aAAa,CAAE,CAAC,CAChB,8BAAK,CACD,OAAO,CAAE,YAAY,CACrB,KAAK,CAAE,KAAK",
+"mappings": "AACI,wBAAY,CACR,aAAa,CAAE,CAAC,CAChB,8BAAM,CACF,OAAO,CAAE,YAAY,CACrB,KAAK,CAAE,KAAK,CAMpB,uBAAY,CACR,aAAa,CAAE,GAAG,CAEtB,oCAAyB,CACrB,KAAK,CAAE,IAAI",
 "sources": ["../scss/newProject.scss"],
 "names": [],
 "file": "newProject.css"

@@ -1,10 +1,18 @@
 .new-project {
     .form-group {
         margin-bottom: 0;
-        input{
+        input {
             display: inline-block;
             width: 200px;
         }
-        
+    }
+}
+
+.modal-body {
+    .handle-top {
+        margin-bottom: 5px;
+    }
+    .table tr td:first-child {
+        width: 50px;
     }
 }

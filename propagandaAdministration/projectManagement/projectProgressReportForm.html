@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>人员联系</title>
+		<link rel="stylesheet" href="../../vendor/bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../vendor/jquery.my-message/css/jquery.my-message.1.1.css" />
+		<link rel="stylesheet" href="../../css/projectProgressReportForm.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid project-progress-report-form">
+			<div class="form-table">
+				<div class="ft-top">
+					<h3 class="text-center">人员联系</h3>
+					<p class="ft-t-state">
+						状态&nbsp;:&nbsp;待审批
+					</p>
+				</div>
+				<table class="table table-bordered">
+					<tbody>
+						<tr>
+							<td>项目</td>
+							<td colspan="3"></td>
+						</tr>
+						<tr>
+							<td>具体内容</td>
+							<td colspan="3"></td>
+						</tr>
+						<tr>
+							<td>负责人</td>
+							<td></td>
+							<td>要求完成时间</td>
+							<td><input style="visibility: hidden;" type="text" class="form-control input-sm" /></td>
+						</tr>
+						<tr>
+							<td>当前完成进度</td>
+							<td>
+								<input type="text" class="form-control input-sm" />
+							</td>
+							<td>设为已完成</td>
+							<td>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+									</label>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="data-table mid-table">
+					<div class="mt-title">
+						<h4>请在以下表格中填写需要领用的宣传物资</h4>
+					</div>
+					<div class="mt-handle-button-group">
+						<button id="mt-btn-add" class="btn btn-default">添加</button>
+						<button id="mt-btn-del" class="btn btn-default">删除</button>
+					</div>
+					<table class="table table-bordered checked-table">
+						<thead>
+							<tr>
+								<th>
+									<input type="checkbox" />
+								</th>
+								<th>所在单位</th>
+								<th>姓名</th>
+								<th>职务</th>
+								<th>联系电话</th>
+								<th>备注</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td><input type="text" class="form-control input-sm" /></td>
+								<td><input type="text" class="form-control input-sm" /></td>
+								<td><input type="text" class="form-control input-sm" /></td>
+								<td><input type="text" class="form-control input-sm" /></td>
+								<td><input type="text" class="form-control input-sm" /></td>
+							</tr>
+							<script id="mt-tr" type="text/html">
+								<tr>
+									<td><input type="checkbox" /></td>
+									<td><input type="text" class="form-control input-sm" /></td>
+									<td><input type="text" class="form-control input-sm" /></td>
+									<td><input type="text" class="form-control input-sm" /></td>
+									<td>
+										<select name="" class="form-control input-sm">
+											<option value="">全部</option>
+										</select>
+									</td>
+									<td><input type="text" class="form-control input-sm" /></td>
+								</tr>
+							</script>
+						</tbody>
+					</table>
+				</div>
+				<table class="table table-bordered">
+					<tbody>
+						<tr>
+							<td>完成情况</td>
+							<td colspan="3">
+								<textarea class="form-control" rows="3"></textarea>
+								<p class="tip">说明:请在这里填写当前完成情况</p>
+							</td>
+						</tr>
+						<tr>
+							<td>附件</td>
+							<td colspan="3">
+								<div class="upload-file">
+									<div class="uf-button">
+										<button id="uf-btn-upload" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>添加</button>
+										<form id="uf-form" method="post" action="/upload" target="uf-frame" encoding="multipart/form-data" enctype="multipart/form-data">
+											<input id="uf-input-upload" type="file" />
+										</form>
+										<iframe id="uf-frame" name="uf-frame" src="" style="visibility:hidden;height: 0;border: 0;"></iframe>
+									</div>
+									<div class="uf-file-list" data-delUrl="url">
+										<p>广州血液中心.doc
+											<a href="javascript:;">[删除]</a>
+										</p>
+										<p>广州血液中心.doc
+											<a href="javascript:;">[删除]</a>
+										</p>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+		<script type="text/javascript" src="../../vendor/jquery1.9.min.js"></script>
+		<script type="text/javascript" src="../../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<!--[if IE 8 ]>
+			script type="text/javascript" src="../../vendor/es5-shim/es5-shim.min.js"></script>
+			<script type="text/javascript" src="../../vendor/es5-shim/es5-sham.min.js"></script>
+		 <![endif]-->
+		<script type="text/javascript" src="../../vendor/template-web-min.js"></script>
+		<script type="text/javascript" src="../../vendor/jquery.my-message/js/jquery.my-message.1.1.js"></script>
+		<script type="text/javascript" src="../../js/public.js"></script>
+		<script type="text/javascript">
+			mid_table_action('mt-tr', 'tbody', 'tr');
+		</script>
+	</body>
+
+</html>

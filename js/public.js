@@ -55,7 +55,8 @@ $('#uf-input-upload').on('change', function(e) {
 		loading.show("上传文件中...");
 	}
 });
-var $uf_f_l = $('.uf-file-list')
+var $uf_f_l = $('.uf-file-list');
+//监听frame的load事件判断是否上传成功
 $('#uf-Frame').on('load', function() {
 	var doc = this.contentWindow.document;
 	var textAreas = doc.getElementsByTagName('textarea');

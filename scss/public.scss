@@ -33,6 +33,14 @@ button {
     padding: 0;
 }
 
+.table {
+    .tip {
+        margin: 3px 0 0;
+        color: #555;
+        font-size: 12px;
+    }
+}
+
 .handle-top {
     background-color: $bg-color;
     border: 1px solid #ddd;
@@ -494,6 +502,8 @@ button {
         }
     }
 }
+
+
 /*
 .modal-body {
     .handle-top {
