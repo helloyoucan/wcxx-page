@@ -1,0 +1,48 @@
+.carried-out-word-plan {
+    .mid-table.tab-table {
+        .tab-content {
+            .table {
+                td {
+                    padding: 5px;
+                    &:first-child {
+                        background-color: white;
+                    }
+                    &:first-child+td {
+                        width: auto;
+                    }
+                    &:last-child {
+                        text-align: center;
+                        width: 80px;
+                    }
+                    .btn {
+                        padding: 3px 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal {
+    .modal-body .table tr td {
+        &:first-child {
+            width: 120px;
+        }
+        &:first-child+td+td {
+            width: 120px;
+        }
+    }
+    .form-table {
+        p.tip {
+            margin: 4px 0 0;
+            color: #555;
+            font-size: 12px;
+        }
+        .checkbox-inline input[type='checkbox'] {
+            margin: 0;
+        }
+    }
+    .modal-footer {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<link rel="stylesheet" href="../vendor/bootstrap-3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/homePage.css" />
+	</head>
+
+	<body>
+		<div class="home-page">
+			<div class="hp-top">
+				<div class="hp-t-left">
+					<img src="../img/logo.png" class="hp-t-l-logo" />
+					<h1>广州血液中心无偿献血综合服务平台</h1>
+				</div>
+				<div class="hp-t-right">
+					<div class="hp-t-r-top">
+						<span>您好！</span>
+						<span>李建明</span>
+						<span>[血源管理科]</span>
+					</div>
+					<div class="hp-t-r-bottom">
+						<span>修改密码</span>
+						<span>安全退出</span>
+					</div>
+				</div>
+			</div>
+			<div class="hp-menu">
+				<div class="btn-group">
+					<div class="dropdown">
+						<a data-target="#" id="menu-my-console" href="javascript:;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							我的工作台
+						</a>
+					</div>
+				</div>
+				<div class="btn-group menu-item">
+					<div class="dropdown">
+						<a data-target="#" href="javascript:;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							宣传管理
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a data-href="../propagandaAdministration/thePublicityOfOverview/thePublicityOfOverview.html" href="javascript:;">宣传事务概览</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a data-href="../propagandaAdministration/transactionManagement/transactionManagement.html" href="javascript:;">宣传事务管理</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a data-href="../propagandaAdministration/publicityPlan/publicityPlanList.html" href="javascript:;">宣传计划管理</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a data-href="javascript:;" href="javascript:;">宣传方案管理</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a data-href="../propagandaAdministration/publicizeTheTransactionStatisticsQuery/publicizeTheTransactionStatisticsQuery.html" href="javascript:;">宣传事务查询统计</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a data-href="../propagandaAdministration/theSummaryReportOfPublicityWork/theSummaryReportOfPublicityWorkList.html" href="javascript:;" >宣传工作总结报告</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="hp-name-list">
+				<ul>
+					<li class="active">
+						<span data-iframeID="my-console">我的工作台</span>
+					</li>
+				</ul>
+			</div>
+			<div class="hp-iframe-list">
+				<ul>
+					<li class="active"><iframe id="my-console" src="homePageDetail.html"></iframe></li>
+				</ul>
+			</div>
+			<div class="footer">
+				广州血液中心无偿献血综合服务平台&nbsp;&nbsp;&nbsp;&nbsp;报障热线&nbsp;:&nbsp;83622354
+			</div>
+
+		</div>
+		<script type="text/javascript" src="../vendor/jquery1.9.min.js"></script>
+		<script type="text/javascript" src="../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script>
+			var iframeNum = 0; //记录iframe的个数/用于生成id
+			var cIframe = { //管理iframe
+				newIframe: function(urlStr, nameText, Num) {
+					/**
+					 * 创建iframe
+					 * urlStr:iframe的url
+					 * nameText:iframe的标签名
+					 * Num:iframe的创建顺序号
+					 * */
+					var nameStr = '<li class="active">' +
+						'<span data-iframeID="iframe' +
+						+Num +
+						'">' +
+						nameText +
+						'<i>&times;</i></span></li>';
+					var iframeStr = '<li class="active"><iframe id="iframe' +
+						Num +
+						'" src="' +
+						urlStr +
+						'"></iframe></li>';
+					$('.hp-name-list').find('li.active').removeClass('active');
+					$('.hp-name-list').find('ul').append(nameStr);
+					$('.hp-iframe-list').find('li.active').removeClass('active');
+					$('.hp-iframe-list').find('ul').append(iframeStr);
+				},
+				switchIframe: function(that) {
+					/**
+					 * 切换iframe
+					 * that：iframe的标签span对象
+					 * */
+					var $span = $(that);
+					if($span.parent('li').hasClass('active')) {
+						return false;
+					} else {
+						var iframeId = $span.attr('data-iframeID');
+						$('.hp-name-list').find('li.active').removeClass('active');
+						$span.parent('li').addClass('active');
+						$('.hp-iframe-list').find('li.active').removeClass('active');
+						$('.hp-iframe-list').find('#' + iframeId).parent('li').addClass('active');
+					}
+				},
+				closeIframe: function(that) {
+					/**
+					 * 关闭iframe
+					 * that：iframe的标签span对象
+					 * */
+					var $span = $(that),
+						$NameLi = $span.parent('li'),
+						iframeId = $span.attr('data-iframeID');
+					//删除标签
+					if($NameLi.hasClass('active')) {
+						$NameLi.prev('li').addClass('active');
+					}
+					$NameLi.remove();
+					//删除iframe
+					var $iframe = $('.hp-iframe-list').find('#' + iframeId);
+					var $iframeLi = $iframe.parent('li');
+					if($iframeLi.hasClass('active')) {
+						$iframeLi.prev('li').addClass('active');
+					}
+					$iframeLi.remove();
+				}
+			}
+			//菜单中的我的工作台
+			$('#menu-my-console').on('click', function() {
+				if($('.hp-name-list').find('span[data-iframeID="my-console"]').parent('li').hasClass('active')) {
+					return false;
+				} else {
+					$('.hp-name-list').find('li.active').removeClass('active');
+					$('.hp-name-list').find('span[data-iframeID="my-console"]').parent('li').addClass('active');
+					$('.hp-iframe-list').find('li.active').removeClass('active');
+					$('.hp-iframe-list').find('#my-console').parent('li').addClass('active');
+				}
+			});
+			//菜单中的其他菜单
+			var $dropdown_menu = $('.menu-item').find('.dropdown-menu');
+			$dropdown_menu.on('click', 'a', function(e) {
+				var $a = $(e.target);
+				cIframe.newIframe($a.attr('data-href'), $a.text(), iframeNum++);
+			});
+			//关闭和切换iframe
+			$('.hp-name-list').on('click', 'span', function(e) {
+				if((e.target.nodeName).toLowerCase() == 'i') {
+					//关闭
+					cIframe.closeIframe(this);
+				} else {
+					//切换
+					cIframe.switchIframe(this);
+				}
+			});
+			//设置iframe高度
+			setIframeListH();
+			$(window).on('resize', function() {
+				setIframeListH();
+			});
+
+			function setIframeListH() {
+				var $iframeList = $('.hp-iframe-list'),
+					bodyH = $('body').height() || $('html').height();
+				$iframeList.height(bodyH - $('.hp-top').outerHeight() - $('.hp-menu').outerHeight() - $('.hp-name-list').outerHeight() - $('.footer').outerHeight());
+			}
+		</script>
+	</body>
+
+</html>

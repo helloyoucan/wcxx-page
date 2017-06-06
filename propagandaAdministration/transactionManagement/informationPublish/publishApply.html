@@ -11,7 +11,7 @@
 	</head>
 
 	<body>
-		<div class="container-fluid setMaxWidth publish-apply">
+		<div class="container-fluid setWidth publish-apply">
 			<div class="form-table">
 				<div class="ft-top">
 					<h3 class="text-center">宣传信息发布申请</h3>
@@ -199,9 +199,10 @@
 			$(".ft-b-r-b-left").on("click", "button", function() {
 				window.open('../../public/submitToDealWith.html', '提交办理', 'height=503, width=760, top=' + (winH - 503) / 2 + ', left=' + (winW - 760) / 2 + ', toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
 			});
+			//查看流程图
 			$("#readFliwImg").on("click", function() {
-				window.open('../../public/flowImg.html', '查看流程图', 'height=705, width=817, top=' + (winH - 705) / 2 + ', left=' + (winW - 817) / 2 + ', toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
-			})
+				window.open('../../public/flowImg.html', '查看流程图', 'height=525, width=840, top=' + (window.screen.height - 525) / 2 + ', left=' + (window.screen.width - 840) / 2 + ', toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
+			});
 		</script>
 	</body>
 

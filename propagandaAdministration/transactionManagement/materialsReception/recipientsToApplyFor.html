@@ -184,8 +184,10 @@
 		</div>
 		<script type="text/javascript" src="../../../vendor/jquery1.9.min.js"></script>
 		<script type="text/javascript" src="../../../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="../../../vendor/es5-shim/es5-shim.min.js"></script>
-		<script type="text/javascript" src="../../../vendor/es5-shim/es5-sham.min.js"></script>
+		<!--[if IE 8 ]> 
+			script type="text/javascript" src="../../vendor/es5-shim/es5-shim.min.js"></script>
+			<script type="text/javascript" src="../../vendor/es5-shim/es5-sham.min.js"></script>
+		 <![endif]-->
 		<script type="text/javascript" src="../../../vendor/template-web-min.js"></script>
 		<script type="text/javascript" src="../../../vendor/jquery.my-message/js/jquery.my-message.1.1.js"></script>
 		<script type="text/javascript" src="../../../js/public.js"></script>
@@ -195,12 +197,13 @@
 			$(".ft-b-r-b-left").on("click", "button", function() {
 				window.open('../../public/submitToDealWith.html', '提交办理', 'height=503, width=760, top=' + (winH - 503) / 2 + ', left=' + (winW - 760) / 2 + ', toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
 			});
+			//查看流程图
 			$("#readFliwImg").on("click", function() {
-				window.open('../../public/flowImg.html', '查看流程图', 'height=705, width=817, top=' + (winH - 705) / 2 + ', left=' + (winW - 817) / 2 + ', toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
-			})
-
-			//添加表格的一行
-			$mid_table = $('.mid-table');
+				window.open('../../public/flowImg.html', '查看流程图', 'height=525, width=840, top=' + (window.screen.height - 525) / 2 + ', left=' + (window.screen.width - 840) / 2 + ', toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
+			});
+			mid_table_action('mt-tr', 'tbody', 'tr');
+			//添加表格的一行//提到public.js里面了
+			/*$mid_table = $('.mid-table');
 			$mid_table.find('#mt-btn-add').on('click', function() {
 				var mt_tr_html = template('mt-tr');
 				$("#mt-tr").parent('tbody').append(mt_tr_html);
@@ -219,7 +222,7 @@
 				if(!$mid_table.find('td input[type="checkbox"]').length) {
 					$mid_table.find('th input[type="checkbox"]').prop('checked', false);
 				}
-			});
+			});*/
 		</script>
 	</body>
 

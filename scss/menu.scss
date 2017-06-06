@@ -1,10 +1,11 @@
 .menu {
-    padding: 20px 50px;
+    //  padding: 20px 50px;
     overflow: hidden;
     .m-title {
         background-image: url(../img/menu-title-bg.png);
         background-repeat: no-repeat;
-        background-size: 40px 40px;
+        background-size: 34px 34px;
+        background-position: 3px;
         padding-left: 40px;
         height: 40px;
         h3 {
@@ -16,7 +17,7 @@
         }
     }
     .m-content {
-        padding: 20px 15px 20px 35px;
+        padding: 20px 15px 20px 40px;
         overflow: hidden;
         .m-c-item {
             float: left;

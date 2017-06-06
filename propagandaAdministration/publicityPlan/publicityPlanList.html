@@ -3,10 +3,11 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>宣传计划列表</title>
 		<link rel="stylesheet" href="../../vendor/bootstrap-3.3.7/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="../../css/public.css" />
 		<link rel="stylesheet" href="../../css/newPublicityPlanList.css" />
+		<link rel="stylesheet" href="../../vendor/jquery.my-message/css/jquery.my-message.1.1.css" />
 	</head>
 
 	<body>
@@ -48,18 +49,18 @@
 				</form>
 			</div>
 			<div class="handle-button-group">
-				<a href="newPublicityPlan.html" class="btn btn-default btn-sm">
+				<a href="newWorkPlan.html" class="btn btn-default btn-sm">
 					<span class="glyphicon glyphicon-plus"></span> 新建
 				</a>
-				<a href="publishApply.html" class="btn btn-default btn-sm">
+				<button type="button" class="btn btn-default btn-sm">
 					<span class="glyphicon glyphicon-file"></span> 归档
-				</a>
+				</button>
 				<button type="button" class="btn btn-default btn-sm">
 					<spam class="glyphicon glyphicon-remove"></spam>
-					删除<tton>
+					删除</button>
 			</div>
 			<div class="data-table">
-				<table class="table table-bordered table-hover">
+				<table class="table table-bordered table-hover checked-table">
 					<thead>
 						<tr>
 							<th><input type="checkbox" /></th>
@@ -128,32 +129,42 @@
 						<span href="#" aria-label="Previous">
 							<span aria-hidden="true">&laquo;</span>
 						</span>
+					</li>
 					<li class="active">
 						<span href="#">1</span>
+					</li>
 					<li>
 						<span href="#">2</span>
+					</li>
 					<li>
 						<span href="#">3</span>
+					</li>
 					<li>
 						<span href="#">4</span>
+					</li>
 					<li>
 						<span href="#">5</span>
+					</li>
 					<li>
 						<span href="#" aria-label="Next">
 							<span aria-hidden="true">&raquo;</span>
 						</span>
+					</li>
 					<li class="li-page-handle">
 						转到第
 						<input type="text" class="form-control input-sm" /> 页
-							<button type="button" class="btn btn-default btn-sm">
+						<button type="button" class="btn btn-default btn-sm">
 							GO
 						</button>
-				</li>
+					</li>
+					</li>
 				</ul>
 			</div>
 		</div>
 		<script type="text/javascript" src="../../vendor/jquery1.9.min.js"></script>
 		<script type="text/javascript" src="../../vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../vendor/jquery.my-message/js/jquery.my-message.1.1.js"></script>
+		<script type="text/javascript" src="../../js/public.js"></script>
 	</body>
 
 </html>

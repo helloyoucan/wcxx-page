@@ -1,6 +1,9 @@
 @charset "utf-8";
 .the-publicity-of-overview {
     font-family: "微软雅黑";
+    .row {
+        margin: 0;
+    }
     .font-orange {
         color: orange;
         font-size: 16px;
@@ -18,17 +21,17 @@
             display: inline-block;
             width: 22px;
             height: 35px;
-            background-size: 22px 22px;
+            background-size: 16px 16px;
             background-repeat: no-repeat;
             background-position: center;
         }
         .tpoo-t-icon-left {
             float: left;
-            background-image: url(../img/chart.png);
+            background-image: url(../img/chart.gif);
         }
         .tpoo-t-icon-right {
             float: right;
-            background-image: url(../img/update.png);
+            background-image: url(../img/update.gif);
         }
     }
     .tpoo-left {
@@ -73,12 +76,13 @@
         .tpoo-title {
             border: 1px solid #ddd;
         }
-       
     }
-} .tpoo-r-chart {
-            border: 1px solid #ddd;
-            border-top: none;
-            height: 200px;
-            margin-bottom: 5px;
-            padding: 5px;
-        }
+}
+
+.tpoo-r-chart {
+    border: 1px solid #ddd;
+    border-top: none;
+    height: 200px;
+    margin-bottom: 5px;
+    padding: 5px;
+}

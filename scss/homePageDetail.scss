@@ -1,0 +1,77 @@
+@charset 'utf-8';
+.home-page-detail {
+    .nav-tabs {
+        background-color: #f2f2f2;
+        border: 1px solid #C9C9C9;
+        border-bottom: none;
+        height: 41px;
+        >li {
+            margin-bottom: 0;
+            height: 40px;
+            >a {
+                border-right: 1px solid #C9C9C9;
+                padding: 10px 10px 10px 40px;
+                font-family: "microsoft yahei";
+                background-size: 25px;
+                background-repeat: no-repeat;
+                background-position: 10px 7px;
+                font-weight: bold;
+                i {
+                    font-style: normal;
+                }
+            }
+        }
+        >li.active>a {
+            border: none;
+            border-radius: 0;
+            border-right: 1px solid #C9C9C9;
+        }
+    }
+    a[href='#backlog'] {
+        background-image: url(../img/icon-pen.png);
+    }
+    a[href='#finished'] {
+        background-image: url(../img/icon-hook.png);
+    }
+    a[href='#my-plan'] {
+        background-image: url(../img/icon-book.png);
+    }
+    a[href='#my-project'] {
+        background-image: url(../img/icon-book-2.png);
+    }
+    a[href='#system-message'] {
+        background-image: url(../img/icon-message.png);
+    }
+    li.li-more {
+        float: right;
+        >a {
+            border: none;
+            padding: 10px 5px;
+        }
+    }
+    .data-table {
+        tr {
+            td {
+                padding: 4px;
+                &:first-child+td {
+                    width: auto;
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .page .pagination {
+        margin-top: 5px;
+    }
+    .row {
+        margin: 0;
+        .col-xs-6 {
+            padding-right: 0;
+            padding-left: 5px;
+            &:first-child {
+                padding-left: 0;
+                padding-right: 5px;
+            }
+        }
+    }
+}
